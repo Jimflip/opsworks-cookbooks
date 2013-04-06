@@ -28,9 +28,6 @@ dev_pkgs = Array.new
 
 case node['platform_family']
 when "debian"
-
-  dev_pkgs << "libicu-dev"
-  dev_pkgs << "libcurl4-openssl-dev"
   dev_pkgs << value_for_platform(
     "debian" => { "default" => "libmozjs-dev" },
     "ubuntu" => {
@@ -38,6 +35,8 @@ when "debian"
       "default" => "libmozjs-dev"
     }
   )
+  dev_pkgs << "libicu-dev"
+  dev_pkgs << "libcurl4-openssl-dev"
 
 when "rhel", "fedora"
   include_recipe "yum::epel"
