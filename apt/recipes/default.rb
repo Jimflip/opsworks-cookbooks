@@ -22,7 +22,9 @@
 execute "apt-get-update" do
   command "apt-get update"
   ignore_failure true
-  not_if do ::File.exists?('/var/lib/apt/periodic/update-success-stamp') end
+
+ #JB force this
+  #not_if do ::File.exists?('/var/lib/apt/periodic/update-success-stamp') end
 end
 
 # For other recipes to call to force an update
