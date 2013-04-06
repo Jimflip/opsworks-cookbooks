@@ -32,7 +32,8 @@ when "debian"
     "debian" => { "default" => "libmozjs-dev" },
     "ubuntu" => {
       "10.04" => "xulrunner-dev",
-      "default" => "libmozjs-dev"
+      "default" => "libmozjs-dev",
+	"12.04" => "libmozjs185-dev"
     }
   )
   dev_pkgs << "libicu-dev"
