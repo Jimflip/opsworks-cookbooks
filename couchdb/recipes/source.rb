@@ -91,6 +91,15 @@ end
   end
 end
 
+[node['couch_db']['config']['couchdb']['database_dir'],node['couch_db']['config']['couchdb']['view_index_dir']].each do |dir|
+  directory dir do
+    owner "couchdb"
+    group "couchdb"
+    mode "0770"
+    not_if { ::FileTest.exists?(dir) }
+  end
+end
+
 template "/usr/local/etc/couchdb/local.ini" do
   source "local.ini.erb"
   owner "couchdb"
