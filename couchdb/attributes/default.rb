@@ -37,8 +37,8 @@ default['couch_db']['config']['couchdb']['delayed_commits'] = true
 default['couch_db']['config']['couchdb']['batch_save_size'] = 1000
 default['couch_db']['config']['couchdb']['batch_save_interval'] = 1000  # In ms (1 second)
 
-default['couch_db']['config']['couchdb']['database_dir'] = "/vol/databases"
-default['couch_db']['config']['couchdb']['view_index_dir'] = "/vol/views"
+default['couch_db']['config']['couchdb']['database_dir'] = "/vol/couch/databases"
+default['couch_db']['config']['couchdb']['view_index_dir'] = "/vol/couch/views"
 
 default['couch_db']['config']['httpd']['port'] = 5984
 default['couch_db']['config']['httpd']['bind_address'] = "0.0.0.0"
