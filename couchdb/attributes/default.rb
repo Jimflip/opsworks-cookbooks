@@ -41,3 +41,4 @@ default['couch_db']['config']['httpd']['port'] = 5984
 default['couch_db']['config']['httpd']['bind_address'] = "0.0.0.0"
 
 default['couch_db']['config']['log']['level'] = "info"
+default['couch_db']['config']['admins']['admin'] = "-hashed-70df7550be0862d4f95b3447365034480042c3db,ecb40f282e2bc887ebdba32320fedcb6"
