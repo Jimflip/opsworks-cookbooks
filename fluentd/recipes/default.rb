@@ -1,6 +1,6 @@
 
 apt_package "unzip"
-apt_package "libxslt-dev"
+apt_package "libxslt1-dev"
 apt_package "libxml2-dev"
 
 fluent_zip = File.join(Chef::Config[:file_cache_path], "/", "fluent.zip")
