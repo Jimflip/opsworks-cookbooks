@@ -17,20 +17,4 @@
 		include_tag_key true
 		disable_time_format true
 	</store>
-	<store>
-		type s3
-		aws_key_id <%= node['fluentd']['config']['s3']['aws_key'] %>
-		aws_sec_key <%= node['fluentd']['config']['s3']['aws_sec_key'] %>
-		s3_bucket <%= node['fluentd']['config']['s3']['bucket'] %>
-		s3_endpoint <%= node['fluentd']['config']['s3']['endpoint'] %>
-		buffer_path <%= node['fluentd']['config']['s3']['buffer_path'] %>
-
-		time_slice_format %Y%m%d%H
-
-		utc
-
-		buffer_chunk_limit <%= node['fluentd']['config']['s3']['buffer_chunk_limit'] %>
-
-		flush_interval <%= node['fluentd']['config']['s3']['flush_interval'] %>
-	</store>
 </match>
