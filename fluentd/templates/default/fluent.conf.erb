@@ -1,0 +1,36 @@
+<source>
+  type forward
+  port 24224
+</source>
+
+<match bbc.**>
+	type copy
+
+	<store>
+		type couch
+		host <%= node['fluentd']['config']['couch']['host'] %>
+		database <%= node['fluentd']['config']['couch']['database'] %>
+		user <%= node['fluentd']['config']['couch']['user'] %>
+		password <%= node['fluentd']['config']['couch']['password'] %>
+
+		flush_interval <%= node['fluentd']['config']['couch']['flush_interval'] %>
+		include_tag_key true
+		disable_time_format true
+	</store>
+	<store>
+		type s3
+		aws_key_id <%= node['fluentd']['config']['s3']['aws_key'] %>
+		aws_sec_key <%= node['fluentd']['config']['s3']['aws_sec_key'] %>
+		s3_bucket <%= node['fluentd']['config']['s3']['bucket'] %>
+		s3_endpoint <%= node['fluentd']['config']['s3']['endpoint'] %>
+		buffer_path <%= node['fluentd']['config']['s3']['buffer_path'] %>
+
+		time_slice_format %Y%m%d%H
+
+		utc
+
+		buffer_chunk_limit <%= node['fluentd']['config']['s3']['buffer_chunk_limit'] %>
+
+		flush_interval <%= node['fluentd']['config']['s3']['flush_interval'] %>
+	</store>
+</match>
