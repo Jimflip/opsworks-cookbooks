@@ -1,3 +1,4 @@
+default['fluentd']['log'] = "/var/log/fluentd/fluent.log"
 default['fluentd']['config']['couch']['host'] = "db.analytics.dimsum.hk"
 default['fluentd']['config']['couch']['database'] = "bbc_monitor"
 
