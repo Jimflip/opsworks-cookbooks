@@ -19,6 +19,7 @@
 	</store>
 	<store>
 		type s3
+		buffer_type memory
 		aws_key_id <%= node['fluentd']['config']['s3']['aws_key'] %>
 		aws_sec_key <%= node['fluentd']['config']['s3']['aws_sec_key'] %>
 		s3_bucket <%= node['fluentd']['config']['s3']['bucket'] %>
