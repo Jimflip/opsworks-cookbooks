@@ -1,4 +1,3 @@
-
 apt_package "unzip"
 apt_package "libxslt1-dev"
 apt_package "libxml2-dev"
@@ -23,7 +22,7 @@ bash 'gahh1' do
     sudo unzip #{fluent_zip}
     cd fluentd-master
     sudo gem build fluentd.gemspec
-    gem install fluentd-0.10.14.gem
+    gem install fluentd-0.10.33.gem 
   EOH
 
 end
