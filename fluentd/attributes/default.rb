@@ -1,5 +1,5 @@
 default['fluentd']['log'] = "/var/log/fluent/fluent.log"
-default['fluentd']['config']['couch']['host'] = "db.analytics.dimsum.hk"
+default['fluentd']['config']['couch']['host'] = "db.rum.dimsum.tv"
 default['fluentd']['config']['couch']['database'] = "bbc_monitor"
 
 default['fluentd']['config']['couch']['flush_interval'] = "2s"
